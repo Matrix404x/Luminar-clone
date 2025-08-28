@@ -1,0 +1,111 @@
+.insta-section {
+  overflow: hidden; /* Hide scrollbar */
+  white-space: nowrap;
+  padding: 20px 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.insta-track {
+  display: inline-block;
+  animation: scroll 25s linear infinite; /* speed control */
+}
+
+.insta-track img {
+  height: 400px; /* adjust size */
+  width: 350px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+/* Animation for infinite scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* inspired from this svgbackgrounds.com/ */
+.button {
+  width: fit-content;
+  display: flex;
+  padding: 0.8em 1.1em;
+  gap: 0.4rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      105deg,
+      #880088,
+      #990599,
+        #a734a7,
+        #bb6fbb,
+        #a734a7,
+      #990599,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background 0.3s ease;
+  color: #fff;
+}
+
+.button:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+
+.button:hover svg {
+  fill: #fff;
+}
+
+.button svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: 0.3s ease;
+}
+
+
+
+
+
+.card-img-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+.card:hover .card-img-top::after {
+  animation: shine 0.75s ease forwards;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+
